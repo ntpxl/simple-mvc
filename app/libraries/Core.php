@@ -1,7 +1,7 @@
 <?php
 
     class Core{
-        protected $currentController = 'Pages';
+        protected $currentController = 'Examples';
         protected $currentMethod = 'index';
         protected $params = [];
     
@@ -21,7 +21,7 @@
             if(isset($url[1])){
                 if(method_exists($this->currentController, $url[1])){
                     $this->currentMethod = $url[1];
-                    $unset($url[1]);
+                    unset($url[1]);
                 }
             }
 
