@@ -49,10 +49,14 @@ From there, the Core.php will seperate the URL in an array with the controller, 
 
 ## Important methods
 
+### Controller
 Controllers come with a pre-written modal() and view() method.
 $this->model($modelname) will return a new instance of the required model. It will also require it.
 $this->view($view, $data[]) will return the view if it exists. If not, the application will die. You might want to rewrite that to a 404
-The Database.php comes with a variety of methos.
 
+### Database
+The Database.php comes with a variety of methods. To access those, I advise to load a new Database instance in each Model.
+**query($query)** will prepare the SQL query using PDO. With **bind($param, $value, $type)** you can bind your params with a value to the query. If the type is null, it will try to auto-detect it. With **execute()** you can execute the query. To fetch the results, you can user either **resultSet()** or **singleResult()**. You'll either recieve a list of all results as objects or a single result as an object. **rowCount()** will return the number of results. 
 
-
+## Important
+You have to change the CONSTANTS definied in the app/config/config.php!
