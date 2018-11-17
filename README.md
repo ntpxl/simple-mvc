@@ -1,7 +1,7 @@
 simple-mvc-in-php
 ======
 
-Out of boredome and becaue of interest in the topic of __MVC IN PHP__, I've created this very basic framework. 
+Out of boredome and because of interest in the topic of __MVC IN PHP__, I've created this very basic framework. 
 Because of lacking comments in the code, I've provided this readme to explain what's going on at least a little bit.
 
 ## Introduction
